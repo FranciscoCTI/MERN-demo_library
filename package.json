@@ -19,5 +19,8 @@
     "express": "^5.1.0",
     "mongoose": "^8.13.1",
     "path-to-regexp": "^8.2.0"
+  },
+  "devDependencies": {
+    "react-native-scripts": "2.0.1"
   }
 }
