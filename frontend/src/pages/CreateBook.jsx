@@ -17,7 +17,7 @@ const CreateBook = () => {
     const handleSaveBook = () => {
         const data = { Name, ISBN, MongoId };
         setLoading(true);
-        axios.post('https://mern-demo-library.onrender.com', data)
+        axios.post('http://localhost:5000/books', data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book created succesfully', { variant: 'success' });

@@ -17,7 +17,7 @@ const EditBook = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`https://mern-demo-library.onrender.com/books/${id}`)
+        axios.get(`http://localhost:5000/books/${id}`)
             .then((response) => {
 
                 const gottenData = response.data;
