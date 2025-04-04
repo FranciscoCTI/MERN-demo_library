@@ -32,6 +32,7 @@ app.use(
         origin: ['http://localhost:5000', 'https://mern-demo-library.onrender.com'],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowHeaders: ['Content-Type'],
+        credentials: true
     })
 );
 
