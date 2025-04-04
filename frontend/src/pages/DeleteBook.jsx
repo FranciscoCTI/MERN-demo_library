@@ -13,7 +13,7 @@ const DeleteBook = () => {
     const { id } = useParams();
 
     const handleDeleteBook = () => {
-        axios.delete(`http://localhost:5000/books/${id}`)
+        axios.delete(`https://mern-demo-library.onrender.com/books/${id}`)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book deleted', { variant: 'success' });

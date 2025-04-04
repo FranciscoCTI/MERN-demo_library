@@ -15,7 +15,7 @@ const Home = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get('http://localhost:5000/books')
+        axios.get('https://mern-demo-library.onrender.com/books')
             .then((response) => {
                 setBooks(response.data.datum);
                 setLoading(false);
