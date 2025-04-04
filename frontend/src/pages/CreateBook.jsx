@@ -4,6 +4,7 @@ import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
+import { apiURL } from '../../../backend/config';
 
 const CreateBook = () => {
     const [Name, setName] = useState('');
@@ -17,7 +18,7 @@ const CreateBook = () => {
     const handleSaveBook = () => {
         const data = { Name, ISBN, MongoId };
         setLoading(true);
-        axios.post('http://localhost:5000/books', data)
+        axios.post(apiURL, data)
             .then(() => {
                 setLoading(false);
                 enqueueSnackbar('Book created succesfully', { variant: 'success' });

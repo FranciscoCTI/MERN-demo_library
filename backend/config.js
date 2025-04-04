@@ -27,3 +27,5 @@ export const mongoDBURL = "mongodb+srv://" +
     ".w6bc9.mongodb.net/" +
     mongoCollectionName +
     "?retryWrites=true&w=majority&appName=DemoCluster";
+
+export const apiURL = 'https://mern-api-library.onrender.com/books';

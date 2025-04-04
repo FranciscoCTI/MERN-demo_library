@@ -4,6 +4,7 @@ import Spinner from '../components/Spinner';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack'
+import { apiURL } from '../../../backend/config';
 
 const EditBook = () => {
     const [Name, setName] = useState('');
@@ -17,7 +18,7 @@ const EditBook = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`http://localhost:5000/books/${id}`)
+        axios.get(apiURL + `${id}`)
             .then((response) => {
 
                 const gottenData = response.data;
