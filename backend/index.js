@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use(express.json());
 
 //CORS
-app.use(cors());
+//app.use(cors());
 
 app.use(
     cors({
