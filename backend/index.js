@@ -27,15 +27,14 @@ app.use(express.json());
 //CORS
 app.use(cors());
 
-/*
 app.use(
     cors({
-        origin: 'http://localhost:5000',
+        origin: 'https://mern-demo-library.onrender.com',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         allowHeaders: ['Content-Type'],
     })
 );
-*/
+
 
 
 app.get('/', (req, res) => {
