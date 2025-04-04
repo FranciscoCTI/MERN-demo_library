@@ -27,12 +27,23 @@ app.use(express.json());
 //CORS
 //app.use(cors());
 
+const allowedOrigins = [
+    'http://localhost:5000',
+    'https://mern-demo-library.onrender.com'
+];
+
 app.use(
     cors({
-        origin: ['http://localhost:5000', 'https://mern-demo-library.onrender.com'],
+        origin: function (origin, callback) {
+            if (!origin || allowedOrigins.includes(origin)) {
+                callback(null, true);
+            } else {
+                callback(new Error('Not allowed by CORS'));
+            }
+        },
+        credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-        credentials: true
+        allowedHeaders: ['Content-Type']
     })
 );
 
