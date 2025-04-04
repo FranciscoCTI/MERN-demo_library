@@ -31,7 +31,7 @@ app.use(
     cors({
         origin: ['http://localhost:5000', 'https://mern-demo-library.onrender.com'],
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowHeaders: ['Content-Type'],
+        allowedHeaders: ['Content-Type'],
         credentials: true
     })
 );
