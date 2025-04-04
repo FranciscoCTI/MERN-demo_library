@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.17",
+    "@tailwindcss/vite": "^4.1.2",
     "axios": "^1.8.4",
+    "bookstore1": "file:..",
     "frontend": "file:",
     "mern-demo": "file:..",
     "notistack": "^3.0.2",
