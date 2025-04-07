@@ -25,8 +25,9 @@ if (process.env.NODE_ENV === 'production') {
 app.use(express.json());
 
 //CORS
-//app.use(cors());
+app.use(cors());
 
+/*
 const allowedOrigins = [
     'http://localhost:5000',
     'https://mern-demo-library.onrender.com'
@@ -46,6 +47,7 @@ app.use(
         allowedHeaders: ['Content-Type']
     })
 );
+*/
 
 
 
